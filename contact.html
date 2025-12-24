@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique | TIMELESS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="contact-page">
+
+    <header class="main-header">
+        <nav class="nav-wrap">
+            <div class="nav-links left">
+                <a href="index.html">Home</a>
+                <a href="products.html">Collection</a>
+            </div>
+
+            <a href="index.html" class="brand-logo">TIMELESS</a>
+
+            <div class="nav-links right">
+                <a href="about.html">Heritage</a>
+                <a href="contact.html" class="active">Boutique</a>
+            </div>
+
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu-overlay">
+        <span class="close-btn" onclick="toggleMobileMenu()">&times;</span>
+        <div class="mobile-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Collection</a>
+            <a href="about.html">Heritage</a>
+            <a href="contact.html" class="active">Boutique</a>
+        </div>
+    </div>
+
+    <main class="contact-container">
+        <section class="contact-form-section" data-aos="fade-right">
+            <div class="form-wrapper">
+                <span class="sub-title">Concierge Service</span>
+                <h1>Get in Touch</h1>
+                <p>Allow us to assist you in finding your next heirloom. Our specialists are available for private consultations.</p>
+                
+                <form class="boutique-form">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="e.g. Julian Mason" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="name@luxury.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Inquiry Type</label>
+                        <select>
+                            <option>Private Appointment</option>
+                            <option>Product Authentication</option>
+                            <option>General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="How may we assist you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-luxury">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="contact-visual" data-aos="fade-left">
+            <div class="visual-bg">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop" alt="Boutique Interior">
+            </div>
+            <div class="contact-info-card">
+                <div class="info-item">
+                    <h4>Global Flagship</h4>
+                    <p>Rue du Rhône 12, 1204 <br>Geneva, Switzerland</p>
+                </div>
+                <div class="info-item">
+                    <h4>Hours</h4>
+                    <p>Mon - Sat: 10:00 - 19:00 <br>Sun: By Appointment</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="minimal-footer">
+        <p>&copy; 2025 TIMELESS HOROLOGY. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({ once: true, duration: 1000 });
+
+        // Mobile Menu Logic
+        function toggleMobileMenu() {
+            const menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("active");
+            
+            if(menu.classList.contains("active")) {
+                document.body.style.overflow = "hidden"; // Lock scroll
+            } else {
+                document.body.style.overflow = "auto"; // Unlock scroll
+            }
+        }
+    </script>
+</body>
+</html>
